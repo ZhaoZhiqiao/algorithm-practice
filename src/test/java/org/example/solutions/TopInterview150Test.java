@@ -15,4 +15,13 @@ public class TopInterview150Test {
         solution = new TopInterview150();
     }
 
+    @Test
+    @DisplayName("88. 合并两个有序数组")
+    void testMerge() {
+        int[] nums1 = {1, 2, 3, 0, 0, 0};
+        int[] nums2 = {2, 5, 6};
+        solution.merge(nums1, 3, nums2, 3);
+        assertArrayEquals(new int[]{1, 2, 2, 3, 5, 6}, nums1);
+    }
+
 }
