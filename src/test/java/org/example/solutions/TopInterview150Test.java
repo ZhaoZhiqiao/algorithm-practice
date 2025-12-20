@@ -24,4 +24,13 @@ public class TopInterview150Test {
         assertArrayEquals(new int[]{1, 2, 2, 3, 5, 6}, nums1);
     }
 
+    @Test
+    @DisplayName("27. 移除元素")
+    void testRemoveElement() {
+        int[] nums = {0};
+        int val = 0;
+        int k = solution.removeElement(nums, val);
+        assertArrayEquals(new int[]{}, java.util.Arrays.copyOf(nums, k));
+    }
+
 }
