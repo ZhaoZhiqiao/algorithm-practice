@@ -12,7 +12,7 @@
 ### 🏷️ 数组 / 字符串
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 合并两个有序数组 - (2025-12-20)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 移除元素 - (2025-12-20)
-- [ ] ![简单](https://img.shields.io/badge/-简单-green) 删除有序数组中的重复项
+- [x] ![简单](https://img.shields.io/badge/-简单-green) 删除有序数组中的重复项 - (2025-12-21)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 删除有序数组中的重复项 II
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 多数元素
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 轮转数组

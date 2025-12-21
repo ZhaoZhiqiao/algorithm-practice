@@ -5,8 +5,8 @@
 ## 📊 进度统计
 
 <!-- PROGRESS_START -->
-![总数](https://img.shields.io/badge/完成进度-2%2F150-red)
-![简单](https://img.shields.io/badge/简单-2%2F40-green)
+![总数](https://img.shields.io/badge/完成进度-3%2F150-red)
+![简单](https://img.shields.io/badge/简单-3%2F40-green)
 ![中等](https://img.shields.io/badge/中等-0%2F92-orange)
 ![困难](https://img.shields.io/badge/困难-0%2F18-red)
 <!-- PROGRESS_END -->

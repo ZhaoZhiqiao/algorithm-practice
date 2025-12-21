@@ -4,7 +4,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.awt.image.Kernel;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TopInterview150Test {
 
@@ -27,10 +30,20 @@ public class TopInterview150Test {
     @Test
     @DisplayName("27. 移除元素")
     void testRemoveElement() {
-        int[] nums = {0};
-        int val = 0;
+        int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
+        int val = 2;
         int k = solution.removeElement(nums, val);
-        assertArrayEquals(new int[]{}, java.util.Arrays.copyOf(nums, k));
+        assertEquals(5, k);
+        assertArrayEquals(new int[]{0, 1, 4, 0, 3}, java.util.Arrays.copyOf(nums, k));
+    }
+
+    @Test
+    @DisplayName("26. 删除有序数组中的重复项")
+    void testRemoveDuplicates() {
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        int k = solution.removeDuplicates(nums);
+        assertEquals(5, k);
+        assertArrayEquals(new int[]{0, 1, 2, 3, 4}, java.util.Arrays.copyOf(nums, k));
     }
 
 }
