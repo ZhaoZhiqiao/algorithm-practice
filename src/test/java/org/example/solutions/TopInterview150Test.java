@@ -54,4 +54,11 @@ public class TopInterview150Test {
         assertEquals(7, k);
         assertArrayEquals(new int[]{0, 0, 1, 1, 2, 3, 3}, java.util.Arrays.copyOf(nums, k));
     }
+
+    @Test
+    @DisplayName("169. 多数元素")
+    void testMajorityElement() {
+        int[] nums = {2, 2, 1, 1, 2, 2, 2, 3, 2, 3};
+        assertEquals(2, solution.majorityElement(nums));
+    }
 }
