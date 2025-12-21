@@ -46,4 +46,12 @@ public class TopInterview150Test {
         assertArrayEquals(new int[]{0, 1, 2, 3, 4}, java.util.Arrays.copyOf(nums, k));
     }
 
+    @Test
+    @DisplayName("80. 删除有序数组中的重复项 II")
+    void testRemoveDuplicates2() {
+        int[] nums = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+        int k = solution.removeDuplicates2(nums);
+        assertEquals(7, k);
+        assertArrayEquals(new int[]{0, 0, 1, 1, 2, 3, 3}, java.util.Arrays.copyOf(nums, k));
+    }
 }

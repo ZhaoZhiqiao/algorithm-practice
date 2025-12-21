@@ -50,4 +50,24 @@ public class TopInterview150 {
         return validIndex + 1;
     }
 
+    /**
+     * 80. 删除有序数组中的重复项 II
+     */
+    public int removeDuplicates2(int[] nums) {
+        final int REPLAY_TIMES = 2;
+        int validIndex = 0, replayTimes = 1, currentNum = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != currentNum) {
+                currentNum = nums[i];
+                nums[++validIndex] = nums[i];
+                replayTimes = 1;
+            }
+            else if (nums[i] == currentNum && replayTimes < REPLAY_TIMES) {
+                nums[++validIndex] = nums[i];
+                replayTimes++;
+            }
+        }
+        return validIndex + 1;
+    }
+
 }
