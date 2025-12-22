@@ -15,7 +15,7 @@
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 删除有序数组中的重复项 - (2025-12-21)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 删除有序数组中的重复项 II - (2025-12-21)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 多数元素 - (2025-12-21)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 轮转数组
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 轮转数组 - (2025-12-22)
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 买卖股票的最佳时机
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 买卖股票的最佳时机 II
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 跳跃游戏

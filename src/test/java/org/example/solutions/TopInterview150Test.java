@@ -61,4 +61,14 @@ public class TopInterview150Test {
         int[] nums = {2, 2, 1, 1, 2, 2, 2, 3, 2, 3};
         assertEquals(2, solution.majorityElement(nums));
     }
+
+    @Test
+    @DisplayName("189. 轮转数组")
+    void testRotate() {
+        int[] nums = {1, 2, 3, 4, 5, 6};
+        int k = 2;
+        solution.rotate(nums, k);
+        assertArrayEquals(new int[]{5,6,1,2,3,4}, java.util.Arrays.copyOf(nums, nums.length));
+    }
+
 }

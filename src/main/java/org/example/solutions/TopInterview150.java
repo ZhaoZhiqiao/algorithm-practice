@@ -84,4 +84,34 @@ public class TopInterview150 {
         }
         return currentNum;
     }
+
+    /**
+     * 189. 轮转数组
+     */
+    public void rotate(int[] nums, int k) {
+        int factor = nums.length, a = k;
+        while (a != 0) {
+            int temp = a;
+            a = factor % a;
+            factor = temp;
+        }
+
+        int beforeIndex, nextIndex, before, next;
+        for (int startIndex = 0; startIndex < factor; startIndex++) {
+            beforeIndex = startIndex;
+            nextIndex = (beforeIndex + k) % nums.length;
+            before = nums[beforeIndex];
+            next = nums[nextIndex];
+
+            while (startIndex != nextIndex) {
+                nums[nextIndex] = before;
+                before = next;
+                beforeIndex = nextIndex;
+                nextIndex = (beforeIndex + k) % nums.length;
+                next = nums[nextIndex];
+            }
+            nums[startIndex] = before;
+        }
+    }
+
 }
