@@ -114,4 +114,16 @@ public class TopInterview150 {
         }
     }
 
+    /**
+     * 121. 买卖股票的最佳时机
+     */
+    public int maxProfit(int[] prices) {
+        int finalProfit = 0, minBefore = prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            finalProfit = Math.max(finalProfit, prices[i] - minBefore);
+            minBefore = Math.min(minBefore, prices[i]);
+        }
+        return finalProfit;
+    }
+
 }

@@ -59,7 +59,8 @@ public class TopInterview150Test {
     @DisplayName("169. 多数元素")
     void testMajorityElement() {
         int[] nums = {2, 2, 1, 1, 2, 2, 2, 3, 2, 3};
-        assertEquals(2, solution.majorityElement(nums));
+        int result = solution.majorityElement(nums);
+        assertEquals(2, result);
     }
 
     @Test
@@ -68,7 +69,14 @@ public class TopInterview150Test {
         int[] nums = {1, 2, 3, 4, 5, 6};
         int k = 2;
         solution.rotate(nums, k);
-        assertArrayEquals(new int[]{5,6,1,2,3,4}, java.util.Arrays.copyOf(nums, nums.length));
+        assertArrayEquals(new int[]{5, 6, 1, 2, 3, 4}, java.util.Arrays.copyOf(nums, nums.length));
     }
 
+    @Test
+    @DisplayName("121. 买卖股票的最佳时机")
+    void testMaxProfit() {
+        int[] nums = {7, 1, 5, 3, 6, 4};
+        int result = solution.maxProfit(nums);
+        assertEquals(5, result);
+    }
 }
