@@ -79,4 +79,12 @@ public class TopInterview150Test {
         int result = solution.maxProfit(nums);
         assertEquals(5, result);
     }
+
+    @Test
+    @DisplayName("122. 买卖股票的最佳时机 II")
+    void testMaxProfit2() {
+        int[] nums = {7, 1, 5, 3, 6, 4};
+        int result = solution.maxProfit2(nums);
+        assertEquals(7, result);
+    }
 }
