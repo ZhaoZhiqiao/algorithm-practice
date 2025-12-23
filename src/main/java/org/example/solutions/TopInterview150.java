@@ -140,4 +140,19 @@ public class TopInterview150 {
         return finalProfit;
     }
 
+    /**
+     * 55. 跳跃游戏
+     */
+    public boolean canJump(int[] nums) {
+        int maxDis = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (maxDis < i){
+                break;
+            }
+            maxDis = Math.max(maxDis, i + nums[i]);
+
+        }
+        return maxDis + 1 >= nums.length;
+    }
+
 }

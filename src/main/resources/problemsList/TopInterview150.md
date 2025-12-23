@@ -18,7 +18,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 轮转数组 - (2025-12-22)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 买卖股票的最佳时机 - (2025-12-22)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 买卖股票的最佳时机 II - (2025-12-23)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 跳跃游戏
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 跳跃游戏 - (2025-12-23)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 跳跃游戏 II
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) H 指数
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) O(1) 时间插入、删除和获取随机元素

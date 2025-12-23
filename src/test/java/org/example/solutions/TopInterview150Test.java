@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.awt.image.Kernel;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TopInterview150Test {
 
@@ -86,5 +85,14 @@ public class TopInterview150Test {
         int[] nums = {7, 1, 5, 3, 6, 4};
         int result = solution.maxProfit2(nums);
         assertEquals(7, result);
+    }
+
+    @Test
+    @DisplayName("55. 跳跃游戏I")
+    void testCanJump() {
+        boolean result = solution.canJump(new int[]{2, 3, 1, 1, 4});
+        boolean result2 = solution.canJump(new int[]{3, 2, 1, 0, 4});
+        assertTrue(result);
+        assertFalse(result2);
     }
 }
