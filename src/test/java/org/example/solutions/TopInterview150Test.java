@@ -95,4 +95,12 @@ public class TopInterview150Test {
         assertTrue(result);
         assertFalse(result2);
     }
+
+    @Test
+    @DisplayName("45. 跳跃游戏 II")
+    void testJump() {
+        int result = solution.jump(new int[]{2, 3, 1, 1, 4});
+        assertEquals(2, result);
+    }
+
 }

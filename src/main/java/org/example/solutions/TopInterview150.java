@@ -146,7 +146,7 @@ public class TopInterview150 {
     public boolean canJump(int[] nums) {
         int maxDis = nums[0];
         for (int i = 1; i < nums.length; i++) {
-            if (maxDis < i){
+            if (maxDis < i) {
                 break;
             }
             maxDis = Math.max(maxDis, i + nums[i]);
@@ -155,4 +155,21 @@ public class TopInterview150 {
         return maxDis + 1 >= nums.length;
     }
 
+    /**
+     * 45. 跳跃游戏 II
+     */
+    public int jump(int[] nums) {
+        int length = nums.length;
+        int end = 0;
+        int maxPosition = 0;
+        int steps = 0;
+        for (int i = 0; i < length - 1; i++) {
+            maxPosition = Math.max(maxPosition, i + nums[i]);
+            if (i == end) {
+                end = maxPosition;
+                steps++;
+            }
+        }
+        return steps;
+    }
 }
