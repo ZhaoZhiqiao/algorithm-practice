@@ -172,4 +172,17 @@ public class TopInterview150 {
         }
         return steps;
     }
+
+    /**
+     * 274. H 指数
+     */
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int h = 0;
+        for (int i = citations.length - 1; i >= 0; i--, h++) {
+            if (h >= citations[i])
+                break;
+        }
+        return h;
+    }
 }

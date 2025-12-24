@@ -103,4 +103,12 @@ public class TopInterview150Test {
         assertEquals(2, result);
     }
 
+    @Test
+    @DisplayName("274. H 指数")
+    void testHIndex() {
+        int result = solution.hIndex(new int[]{3, 0, 6, 1, 5});
+        int result2 = solution.hIndex(new int[]{1,3,1});
+        assertEquals(3, result);
+        assertEquals(1, result2);
+    }
 }
