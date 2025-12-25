@@ -124,4 +124,12 @@ public class TopInterview150Test {
         assertFalse(randomizedSet.insert(2));
         assertEquals(2, randomizedSet.getRandom());
     }
+
+    @Test
+    @DisplayName("238. 除自身以外数组的乘积")
+    void testProductExceptSelf() {
+        int[] nums = new int[]{1, 2, 3, 4};
+        int[] result = solution.productExceptSelf(nums);
+        assertArrayEquals(new int[]{24, 12, 8, 6}, result);
+    }
 }

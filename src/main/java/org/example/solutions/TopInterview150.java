@@ -227,4 +227,20 @@ public class TopInterview150 {
             return arrayList.get(randomIndex);
         }
     }
+
+    /**
+     * 238. 除自身以外数组的乘积
+     */
+    public int[] productExceptSelf(int[] nums) {
+        int[] answer = new int[nums.length];
+        answer[nums.length - 1] = 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            answer[i] = nums[i + 1] * answer[i + 1];
+        }
+        for (int i = 0, right = 1; i < nums.length; i++) {
+            answer[i] = right * answer[i];
+            right *= nums[i];
+        }
+        return answer;
+    }
 }
