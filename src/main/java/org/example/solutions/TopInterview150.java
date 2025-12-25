@@ -160,13 +160,11 @@ public class TopInterview150 {
      */
     public int jump(int[] nums) {
         int length = nums.length;
-        int end = 0;
-        int maxPosition = 0;
-        int steps = 0;
-        for (int i = 0; i < length - 1; i++) {
-            maxPosition = Math.max(maxPosition, i + nums[i]);
+        int steps = 0, end = 0, maxDis = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            maxDis = Math.max(maxDis, i + nums[i]);
             if (i == end) {
-                end = maxPosition;
+                end = maxDis;
                 steps++;
             }
         }
@@ -184,5 +182,49 @@ public class TopInterview150 {
                 break;
         }
         return h;
+    }
+
+    /**
+     * 380. O(1) 时间插入、删除和获取随机元素
+     */
+    static class RandomizedSet {
+        List<Integer> arrayList;
+        Map<Integer, Integer> hashmap;
+        Random random;
+
+        public RandomizedSet() {
+            arrayList = new ArrayList<>();
+            hashmap = new HashMap<>();
+            random = new Random();
+        }
+
+        public boolean insert(int val) {
+            if (!hashmap.containsKey(val)) {
+                arrayList.add(val);
+                hashmap.put(val, arrayList.size() - 1);
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        public boolean remove(int val) {
+            if (hashmap.containsKey(val)) {
+                hashmap.put(arrayList.getLast(), hashmap.get(val));
+                Collections.swap(arrayList, hashmap.get(val), arrayList.size() - 1);
+                hashmap.remove(val);
+                arrayList.removeLast();
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        public int getRandom() {
+            int randomIndex = random.nextInt(arrayList.size());
+            return arrayList.get(randomIndex);
+        }
     }
 }

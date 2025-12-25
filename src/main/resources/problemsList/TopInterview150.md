@@ -21,7 +21,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 跳跃游戏 - (2025-12-23)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 跳跃游戏 II - (2025-12-24)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) H 指数 - (2025-12-24)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) O(1) 时间插入、删除和获取随机元素
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) O(1) 时间插入、删除和获取随机元素 - (2025-12-25)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 除自身以外数组的乘积
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 加油站
 - [ ] ![困难](https://img.shields.io/badge/-困难-red) 分发糖果

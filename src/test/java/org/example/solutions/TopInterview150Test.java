@@ -107,8 +107,21 @@ public class TopInterview150Test {
     @DisplayName("274. H 指数")
     void testHIndex() {
         int result = solution.hIndex(new int[]{3, 0, 6, 1, 5});
-        int result2 = solution.hIndex(new int[]{1,3,1});
+        int result2 = solution.hIndex(new int[]{1, 3, 1});
         assertEquals(3, result);
         assertEquals(1, result2);
+    }
+
+    @Test
+    @DisplayName("O(1) 时间插入、删除和获取随机元素")
+    void testRandomizedSet() {
+        TopInterview150.RandomizedSet randomizedSet = new TopInterview150.RandomizedSet();
+        assertTrue(randomizedSet.insert(1));
+        assertFalse(randomizedSet.remove(2));
+        assertTrue(randomizedSet.insert(2));
+        assertTrue(java.util.Arrays.asList(1, 2).contains(randomizedSet.getRandom()));
+        assertTrue(randomizedSet.remove(1));
+        assertFalse(randomizedSet.insert(2));
+        assertEquals(2, randomizedSet.getRandom());
     }
 }
