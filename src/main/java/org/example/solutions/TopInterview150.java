@@ -243,4 +243,32 @@ public class TopInterview150 {
         }
         return answer;
     }
+
+    /**
+     * 134. 加油站
+     */
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int start = 0, currentGas = 0, currentPos = 0;
+        boolean flag = false;
+        while (start < gas.length) {
+            currentGas = gas[start];
+            currentPos = start;
+            while (currentGas >= cost[currentPos]) {
+                currentGas -= cost[currentPos];
+                currentPos = (currentPos + 1) % cost.length;
+                currentGas += gas[currentPos];
+                if (currentPos == start) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (!flag && currentPos + 1 > start){
+                start = currentPos + 1;
+            } else {
+                break;
+            }
+
+        }
+        return flag ? start : -1;
+    }
 }

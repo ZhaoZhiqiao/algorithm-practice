@@ -132,4 +132,15 @@ public class TopInterview150Test {
         int[] result = solution.productExceptSelf(nums);
         assertArrayEquals(new int[]{24, 12, 8, 6}, result);
     }
+
+
+    @Test
+    @DisplayName("134. 加油站")
+    void testCanCompleteCircuit() {
+        int[] gas = new int[]{1, 2, 3, 4, 5};
+        int[] cost = new int[]{3, 4, 5, 1, 2};
+        int result = solution.canCompleteCircuit(gas, cost);
+        assertEquals(3, result);
+
+    }
 }
