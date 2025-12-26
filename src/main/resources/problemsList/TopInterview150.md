@@ -24,7 +24,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) O(1) 时间插入、删除和获取随机元素 - (2025-12-25)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 除自身以外数组的乘积 - (2025-12-25)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 加油站 - (2025-12-26)
-- [ ] ![困难](https://img.shields.io/badge/-困难-red) 分发糖果
+- [x] ![困难](https://img.shields.io/badge/-困难-red) 分发糖果 - (2025-12-26)
 - [ ] ![困难](https://img.shields.io/badge/-困难-red) 接雨水
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 罗马数字转整数
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 整数转罗马数字

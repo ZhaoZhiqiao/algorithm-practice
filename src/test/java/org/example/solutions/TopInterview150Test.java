@@ -141,6 +141,13 @@ public class TopInterview150Test {
         int[] cost = new int[]{3, 4, 5, 1, 2};
         int result = solution.canCompleteCircuit(gas, cost);
         assertEquals(3, result);
+    }
 
+    @Test
+    @DisplayName("135. 分发糖果")
+    void testCandy() {
+        int[] ratings = new int[]{1, 0, 2};
+        int result = solution.candy(ratings);
+        assertEquals(5, result);
     }
 }
