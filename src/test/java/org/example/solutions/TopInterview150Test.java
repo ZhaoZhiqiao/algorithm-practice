@@ -150,4 +150,12 @@ public class TopInterview150Test {
         int result = solution.candy(ratings);
         assertEquals(5, result);
     }
+
+    @Test
+    @DisplayName("42. 接雨水")
+    void testTrap() {
+        int[] height = new int[]{4, 2, 0, 3, 2, 5};
+        int result = solution.trap(height);
+        assertEquals(9, result);
+    }
 }

@@ -291,4 +291,27 @@ public class TopInterview150 {
         }
         return result;
     }
+
+    /**
+     * 42. 接雨水
+     */
+    public int trap(int[] height) {
+        int length = height.length, result = 0, RMax = height[0], LMax = height[length - 1];
+        int[] right = new int[length], left = new int[length];
+        right[0] = 0;
+        left[length - 1] = 0;
+        for (int i = 1; i < length; i++) {
+            RMax = Math.max(RMax, height[i - 1]);
+            right[i] = RMax;
+        }
+        for (int i = length - 2; i >= 0; i--) {
+            LMax = Math.max(LMax, height[i + 1]);
+            left[i] = LMax;
+        }
+        for (int i = 1; i < length - 1; i++){
+            result += Math.max(Math.min(right[i],left[i]) - height[i], 0);
+        }
+
+        return result;
+    }
 }
