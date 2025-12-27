@@ -158,4 +158,12 @@ public class TopInterview150Test {
         int result = solution.trap(height);
         assertEquals(9, result);
     }
+
+    @Test
+    @DisplayName("13. 罗马数字转整数")
+    void testRomanToInt() {
+        String s = "MCMXCIV";
+        int result = solution.romanToInt(s);
+        assertEquals(1994, result);
+    }
 }

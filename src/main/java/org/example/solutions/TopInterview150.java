@@ -308,9 +308,26 @@ public class TopInterview150 {
             LMax = Math.max(LMax, height[i + 1]);
             left[i] = LMax;
         }
-        for (int i = 1; i < length - 1; i++){
-            result += Math.max(Math.min(right[i],left[i]) - height[i], 0);
+        for (int i = 1; i < length - 1; i++) {
+            result += Math.max(Math.min(right[i], left[i]) - height[i], 0);
         }
+
+        return result;
+    }
+
+    /**
+     * 13. 罗马数字转整数
+     */
+    public int romanToInt(String s) {
+        Map<Character, Integer> dict = Map.of('I', 1, 'V', 5, 'X', 10,
+                'L', 50, 'C', 100, 'D', 500, 'M', 1000);
+        int result = 0;
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < s.length() - 1; i++) {
+            int cur = dict.get(chars[i]), next = dict.get(chars[i + 1]);
+            result += cur < next ? -cur : cur;
+        }
+        result += dict.get(chars[chars.length - 1]);
 
         return result;
     }
