@@ -28,7 +28,7 @@
 - [x] ![困难](https://img.shields.io/badge/-困难-red) 接雨水 - (2025-12-27)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 罗马数字转整数 - (2025-12-27)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 整数转罗马数字 - (2025-12-28)
-- [ ] ![简单](https://img.shields.io/badge/-简单-green) 最后一个单词的长度
+- [x] ![简单](https://img.shields.io/badge/-简单-green) 最后一个单词的长度 - (2025-12-28)
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 最长公共前缀
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 反转字符串中的单词
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) Z 字形变换

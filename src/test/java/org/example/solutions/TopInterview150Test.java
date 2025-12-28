@@ -174,4 +174,12 @@ public class TopInterview150Test {
         String result = solution.intToRoman(num);
         assertEquals("MMMDCCXLIX", result);
     }
+
+    @Test
+    @DisplayName("58. 最后一个单词的长度")
+    void testLengthOfLastWord() {
+        String s = "   fly me   to   the moon  ";
+        int result = solution.lengthOfLastWord(s);
+        assertEquals(4, result);
+    }
 }

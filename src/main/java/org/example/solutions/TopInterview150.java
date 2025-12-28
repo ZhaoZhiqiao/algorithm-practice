@@ -352,4 +352,12 @@ public class TopInterview150 {
         }
         return stringBuilder.toString();
     }
+
+    /**
+     * 58. 最后一个单词的长度
+     */
+    public int lengthOfLastWord(String s) {
+        String[] words = s.trim().split("\\s");
+        return words[words.length - 1].length();
+    }
 }
