@@ -166,4 +166,12 @@ public class TopInterview150Test {
         int result = solution.romanToInt(s);
         assertEquals(1994, result);
     }
+
+    @Test
+    @DisplayName("12. 整数转罗马数字")
+    void testIntToRoman() {
+        int num = 3749;
+        String result = solution.intToRoman(num);
+        assertEquals("MMMDCCXLIX", result);
+    }
 }

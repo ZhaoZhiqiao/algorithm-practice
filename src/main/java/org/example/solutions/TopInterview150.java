@@ -248,7 +248,7 @@ public class TopInterview150 {
      * 134. 加油站
      */
     public int canCompleteCircuit(int[] gas, int[] cost) {
-        int start = 0, currentGas = 0, currentPos = 0;
+        int start = 0, currentGas, currentPos;
         boolean flag = false;
         while (start < gas.length) {
             currentGas = gas[start];
@@ -330,5 +330,26 @@ public class TopInterview150 {
         result += dict.get(chars[chars.length - 1]);
 
         return result;
+    }
+
+    /**
+     * 12. 整数转罗马数字
+     */
+    public String intToRoman(int num) {
+        StringBuilder stringBuilder = new StringBuilder();
+        Map<Integer, String> dict = new HashMap<>();
+        dict.putAll(Map.of(1, "I", 4, "IV", 5, "V", 9, "IX", 10, "X", 40, "XL", 50, "L"));
+        dict.putAll(Map.of(90, "XC", 100, "C", 400, "CD", 500, "D", 900, "CM", 1000, "M"));
+
+        List<Integer> keys = new ArrayList<>(dict.keySet());
+        keys.sort(Collections.reverseOrder());
+
+        for (Integer key : keys) {
+            while (num >= key) {
+                num -= key;
+                stringBuilder.append(dict.get(key));
+            }
+        }
+        return stringBuilder.toString();
     }
 }
