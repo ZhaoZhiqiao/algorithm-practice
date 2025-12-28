@@ -360,4 +360,24 @@ public class TopInterview150 {
         String[] words = s.trim().split("\\s");
         return words[words.length - 1].length();
     }
+
+    /**
+     * 14. 最长公共前缀
+     */
+    public String longestCommonPrefix(String[] strs) {
+        StringBuilder stringBuilder = new StringBuilder();
+        boolean flag = true;
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0].charAt(i);
+            for (String word : strs) {
+                if (i >= word.length() || word.charAt(i) != c) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag)
+                stringBuilder.append(c);
+        }
+        return stringBuilder.toString();
+    }
 }

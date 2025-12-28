@@ -4,8 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.awt.image.Kernel;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TopInterview150Test {
@@ -181,5 +179,13 @@ public class TopInterview150Test {
         String s = "   fly me   to   the moon  ";
         int result = solution.lengthOfLastWord(s);
         assertEquals(4, result);
+    }
+
+    @Test
+    @DisplayName("14. 最长公共前缀")
+    void testLongestCommonPrefix() {
+        String[] strs = new String[]{"flower","flow","flight"};
+        String result = solution.longestCommonPrefix(strs);
+        assertEquals("fl", result);
     }
 }
