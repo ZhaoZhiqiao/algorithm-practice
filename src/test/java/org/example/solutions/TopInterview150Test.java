@@ -184,8 +184,16 @@ public class TopInterview150Test {
     @Test
     @DisplayName("14. 最长公共前缀")
     void testLongestCommonPrefix() {
-        String[] strs = new String[]{"flower","flow","flight"};
+        String[] strs = new String[]{"flower", "flow", "flight"};
         String result = solution.longestCommonPrefix(strs);
         assertEquals("fl", result);
+    }
+
+    @Test
+    @DisplayName("151. 反转字符串中的单词")
+    void testReverseWords() {
+        String s = "a good   example ";
+        String result = solution.reverseWords(s);
+        assertEquals("example good a", result);
     }
 }

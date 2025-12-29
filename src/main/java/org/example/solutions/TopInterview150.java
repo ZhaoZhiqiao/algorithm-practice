@@ -380,4 +380,11 @@ public class TopInterview150 {
         }
         return stringBuilder.toString();
     }
+
+    /**
+     * 151. 反转字符串中的单词
+     */
+    public String reverseWords(String s) {
+        return String.join(" ", Arrays.asList(s.trim().split("\\s+")).reversed());
+    }
 }
