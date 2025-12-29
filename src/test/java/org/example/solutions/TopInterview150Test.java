@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SuppressWarnings({"SpellCheckingInspection"})
 public class TopInterview150Test {
 
     private TopInterview150 solution;
@@ -195,5 +196,14 @@ public class TopInterview150Test {
         String s = "a good   example ";
         String result = solution.reverseWords(s);
         assertEquals("example good a", result);
+    }
+
+    @Test
+    @DisplayName("6. Z 字形变换")
+    void testConvert() {
+        String s = "PAYPALISHIRING";
+        int numRows = 3;
+        String result = solution.convert(s, numRows);
+        assertEquals("PAHNAPLSIIGYIR", result);
     }
 }
