@@ -206,4 +206,13 @@ public class TopInterview150Test {
         String result = solution.convert(s, numRows);
         assertEquals("PAHNAPLSIIGYIR", result);
     }
+
+    @Test
+    @DisplayName("28. 找出字符串中第一个匹配项的下标")
+    void testStrStr() {
+        String haystack = "sadbutsad";
+        String needle = "sad";
+        int result = solution.strStr(haystack, needle);
+        assertEquals(0, result);
+    }
 }
