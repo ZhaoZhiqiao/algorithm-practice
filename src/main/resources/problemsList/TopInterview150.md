@@ -33,7 +33,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 反转字符串中的单词 - (2025-12-29)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) Z 字形变换 - (2025-12-29)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 找出字符串中第一个匹配项的下标 - (2025-12-30)
-- [ ] ![困难](https://img.shields.io/badge/-困难-red) 文本左右对齐
+- [x] ![困难](https://img.shields.io/badge/-困难-red) 文本左右对齐 - (2025-12-30)
 
 ### 🎯 双指针
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 验证回文串

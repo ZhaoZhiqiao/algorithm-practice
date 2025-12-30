@@ -413,6 +413,70 @@ public class TopInterview150 {
      * 28. 找出字符串中第一个匹配项的下标
      */
     public int strStr(String haystack, String needle) {
-        return haystack.indexOf("needle");
+        return haystack.indexOf(needle);
+    }
+
+    /**
+     * 68. 文本左右对齐
+     */
+    public List<String> fullJustify(String[] words, int maxWidth) {
+        List<String> ans = new ArrayList<String>();
+        int right = 0, n = words.length;
+        while (true) {
+            int left = right;
+            int sumLen = 0;
+            while (right < n && sumLen + words[right].length() + right - left <= maxWidth) {
+                sumLen += words[right++].length();
+            }
+
+            if (right == n) {
+                StringBuilder stringBuilder = new StringBuilder(words[left]);
+                for (int i = left + 1; i < n; ++i) {
+                    stringBuilder.append(" ");
+                    stringBuilder.append(words[i]);
+                }
+                int remainSpace = maxWidth - stringBuilder.length();
+                stringBuilder.append(" ".repeat(Math.max(0, remainSpace)));
+                ans.add(stringBuilder.toString());
+                return ans;
+            }
+
+            int numWords = right - left;
+            int numSpaces = maxWidth - sumLen;
+
+            if (numWords == 1) {
+                ans.add(words[left] + " ".repeat(Math.max(0, numSpaces)));
+                continue;
+            }
+
+            int avgSpaces = numSpaces / (numWords - 1);
+            int extraSpaces = numSpaces % (numWords - 1);
+            StringBuilder sb = new StringBuilder();
+
+
+            StringBuilder extraSpaceStr = new StringBuilder();
+            extraSpaceStr.append(" ".repeat(Math.max(0, avgSpaces + 1)));
+            StringBuilder extraPart = new StringBuilder(words[left]);
+            for (int i = left + 1; i < left + extraSpaces + 1; ++i) {
+                extraPart.append(extraSpaceStr);
+                extraPart.append(words[i]);
+            }
+            sb.append(extraPart);
+
+            StringBuilder normalSpaceStr = new StringBuilder();
+            normalSpaceStr.append(" ".repeat(Math.max(0, avgSpaces)));
+            sb.append(normalSpaceStr);
+
+            if (left + extraSpaces + 1 < right) {
+                StringBuilder normalPart = new StringBuilder(words[left + extraSpaces + 1]);
+                for (int i = left + extraSpaces + 2; i < right; ++i) {
+                    normalPart.append(normalSpaceStr);
+                    normalPart.append(words[i]);
+                }
+                sb.append(normalPart);
+            }
+
+            ans.add(sb.toString());
+        }
     }
 }

@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SuppressWarnings({"SpellCheckingInspection"})
@@ -214,5 +216,15 @@ public class TopInterview150Test {
         String needle = "sad";
         int result = solution.strStr(haystack, needle);
         assertEquals(0, result);
+    }
+
+    @Test
+    @DisplayName("68. 文本左右对齐")
+    void testFullJustify() {
+        String[] words = new String[]{"This", "is", "an", "example", "of", "text", "justification."};
+        int maxWidth = 16;
+        List<String> result = solution.fullJustify(words, maxWidth);
+        List<String> expected = List.of(new String[]{"This    is    an", "example  of text", "justification.  "});
+        assertEquals(expected, result);
     }
 }
