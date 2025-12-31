@@ -227,4 +227,12 @@ public class TopInterview150Test {
         List<String> expected = List.of(new String[]{"This    is    an", "example  of text", "justification.  "});
         assertEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("125. 验证回文串")
+    void testIsPalindrome() {
+        String s = "A man, a plan, a canal: Panama";
+        boolean result = solution.isPalindrome(s);
+        assertTrue(result);
+    }
 }

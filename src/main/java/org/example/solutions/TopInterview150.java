@@ -479,4 +479,33 @@ public class TopInterview150 {
             ans.add(sb.toString());
         }
     }
+
+    /**
+     * 125. 验证回文串
+     */
+    public boolean isPalindrome(String s) {
+        int front = 0, behind = s.length() - 1;
+        boolean flag = true;
+        while (front < behind && flag) {
+            char frontChar = s.charAt(front);
+            char behindChar = s.charAt(behind);
+            if (!Character.isDigit(frontChar) && !Character.isLetter(frontChar)) {
+                front++;
+                continue;
+            }
+            if (!Character.isDigit(behindChar) && !Character.isLetter(behindChar)) {
+                behind--;
+                continue;
+            }
+            if (Character.toLowerCase(frontChar) != Character.toLowerCase(behindChar))
+            {
+                flag = false;
+            }
+            else{
+                front++;
+                behind--;
+            }
+        }
+        return flag;
+    }
 }

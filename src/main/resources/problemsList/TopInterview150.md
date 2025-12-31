@@ -36,7 +36,7 @@
 - [x] ![困难](https://img.shields.io/badge/-困难-red) 文本左右对齐 - (2025-12-30)
 
 ### 🎯 双指针
-- [ ] ![简单](https://img.shields.io/badge/-简单-green) 验证回文串
+- [x] ![简单](https://img.shields.io/badge/-简单-green) 验证回文串 - (2025-12-31)
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 判断子序列
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 两数之和 II - 输入有序数组
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 盛最多水的容器
