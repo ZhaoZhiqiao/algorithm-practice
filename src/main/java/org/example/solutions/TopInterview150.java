@@ -497,15 +497,25 @@ public class TopInterview150 {
                 behind--;
                 continue;
             }
-            if (Character.toLowerCase(frontChar) != Character.toLowerCase(behindChar))
-            {
+            if (Character.toLowerCase(frontChar) != Character.toLowerCase(behindChar)) {
                 flag = false;
-            }
-            else{
+            } else {
                 front++;
                 behind--;
             }
         }
         return flag;
+    }
+
+    /**
+     * 392. 判断子序列
+     */
+    public boolean isSubsequence(String s, String t) {
+        int i = 0, j = 0;
+        while (i < t.length() && j < s.length()) {
+            j += t.charAt(i) == s.charAt(j) ? 1 : 0;
+            i++;
+        }
+        return j == s.length();
     }
 }

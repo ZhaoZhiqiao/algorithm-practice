@@ -235,4 +235,13 @@ public class TopInterview150Test {
         boolean result = solution.isPalindrome(s);
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("392. 判断子序列")
+    void testIsSubsequence() {
+        String s = "abc";
+        String t = "ahbgdc";
+        boolean result = solution.isSubsequence(s, t);
+        assertTrue(result);
+    }
 }
