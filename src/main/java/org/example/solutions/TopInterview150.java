@@ -583,4 +583,24 @@ public class TopInterview150 {
         }
         return result;
     }
+
+    /**
+     * 209. 长度最小的子数组
+     */
+    public int minSubArrayLen(int target, int[] nums) {
+        int minLen = Integer.MAX_VALUE, start = 0, end = 0, sum = nums[0];
+        if (sum > target) {
+            return 1;
+        }
+        while (end < nums.length - 1) {
+            if (sum < target) {
+                sum += nums[++end];
+            }
+            while (sum >= target) {
+                minLen = Math.min(minLen, end - start + 1);
+                sum -= nums[start++];
+            }
+        }
+        return minLen != Integer.MAX_VALUE ? minLen : 0;
+    }
 }

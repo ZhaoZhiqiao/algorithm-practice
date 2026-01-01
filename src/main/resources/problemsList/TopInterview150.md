@@ -43,7 +43,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 三数之和 - (2026-01-02)
 
 ### 🪟 滑动窗口
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 长度最小的子数组
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 长度最小的子数组 - (2026-01-02)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 无重复字符的最长子串
 - [ ] ![困难](https://img.shields.io/badge/-困难-red) 串联所有单词的子串
 - [ ] ![困难](https://img.shields.io/badge/-困难-red) 最小覆盖子串

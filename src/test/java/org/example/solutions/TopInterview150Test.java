@@ -273,4 +273,13 @@ public class TopInterview150Test {
         );
         assertEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("209. 长度最小的子数组")
+    void testMinSubArrayLen() {
+        int target = 7;
+        int[] nums = new int[]{2, 3, 1, 2, 4, 3};
+        int result = solution.minSubArrayLen(target, nums);
+        assertEquals(2, result);
+    }
 }
