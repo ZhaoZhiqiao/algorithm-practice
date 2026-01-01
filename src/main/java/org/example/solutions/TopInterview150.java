@@ -1,5 +1,6 @@
 package org.example.solutions;
 
+import java.sql.Array;
 import java.util.*;
 
 
@@ -547,6 +548,38 @@ public class TopInterview150 {
                 behind--;
             else
                 ahead++;
+        }
+        return result;
+    }
+
+    /**
+     * 15. 三数之和
+     */
+    public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> result = new ArrayList<>();
+        int last = nums[0];
+        for (int first = 0; first < nums.length - 2 && nums[first] <= 0; first++) {
+            if (first != 0 && nums[first] == nums[first - 1]) {
+                continue;
+            }
+            int second = first + 1, third = nums.length - 1;
+            while (second < third) {
+                if (second != first + 1 && nums[second] == nums[second - 1]) {
+                    second++;
+                    continue;
+                }
+                int sum = nums[first] + nums[second] + nums[third];
+                if (sum > 0)
+                    third--;
+                else if (sum < 0)
+                    second++;
+                else {
+                    result.add(List.of(nums[first], nums[second], nums[third]));
+                    third--;
+                    second++;
+                }
+            }
         }
         return result;
     }

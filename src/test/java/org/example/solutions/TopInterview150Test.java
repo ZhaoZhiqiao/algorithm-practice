@@ -261,4 +261,16 @@ public class TopInterview150Test {
         int result = solution.maxArea(height);
         assertEquals(49, result);
     }
+
+    @Test
+    @DisplayName("15. 三数之和")
+    void testThreeSum() {
+        int[] nums = new int[]{-1, 0, 1, 2, -1, -4};
+        List<List<Integer>> result = solution.threeSum(nums);
+        List<List<Integer>> expected = List.of(
+                List.of(-1, -1, 2),
+                List.of(-1, 0, 1)
+        );
+        assertEquals(expected, result);
+    }
 }

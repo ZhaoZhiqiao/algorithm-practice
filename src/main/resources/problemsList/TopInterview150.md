@@ -40,7 +40,7 @@
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 判断子序列 - (2025-12-31)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 两数之和 II - 输入有序数组 - (2026-01-01)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 盛最多水的容器 - (2026-01-01)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 三数之和
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 三数之和 - (2026-01-02)
 
 ### 🪟 滑动窗口
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 长度最小的子数组
