@@ -535,4 +535,19 @@ public class TopInterview150 {
         }
         return new int[]{ahead + 1, behind + 1};
     }
+
+    /**
+     * 11. 盛最多水的容器
+     */
+    public int maxArea(int[] height) {
+        int ahead = 0, behind = height.length - 1, result = 0;
+        while (ahead < behind) {
+            result = Math.max(result, Math.min(height[ahead], height[behind]) * (behind - ahead));
+            if (height[ahead] > height[behind])
+                behind--;
+            else
+                ahead++;
+        }
+        return result;
+    }
 }

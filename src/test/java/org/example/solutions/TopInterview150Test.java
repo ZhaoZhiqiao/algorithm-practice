@@ -248,9 +248,17 @@ public class TopInterview150Test {
     @Test
     @DisplayName("167. 两数之和 II - 输入有序数组")
     void testTwoSum() {
-        int[] numbers = new int[]{2,7,11,15};
+        int[] numbers = new int[]{2, 7, 11, 15};
         int target = 9;
         int[] result = solution.twoSum(numbers, target);
-        assertArrayEquals(new int[]{1,2}, result);
+        assertArrayEquals(new int[]{1, 2}, result);
+    }
+
+    @Test
+    @DisplayName("11. 盛最多水的容器")
+    void testMaxArea() {
+        int[] height = new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7};
+        int result = solution.maxArea(height);
+        assertEquals(49, result);
     }
 }
