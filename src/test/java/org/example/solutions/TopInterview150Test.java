@@ -244,4 +244,13 @@ public class TopInterview150Test {
         boolean result = solution.isSubsequence(s, t);
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("167. 两数之和 II - 输入有序数组")
+    void testTwoSum() {
+        int[] numbers = new int[]{2,7,11,15};
+        int target = 9;
+        int[] result = solution.twoSum(numbers, target);
+        assertArrayEquals(new int[]{1,2}, result);
+    }
 }

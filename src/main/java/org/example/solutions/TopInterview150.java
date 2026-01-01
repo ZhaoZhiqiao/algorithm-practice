@@ -518,4 +518,21 @@ public class TopInterview150 {
         }
         return j == s.length();
     }
+
+    /**
+     * 167. 两数之和 II - 输入有序数组
+     */
+    public int[] twoSum(int[] numbers, int target) {
+        int ahead = 0, behind = numbers.length - 1;
+        while (ahead < behind) {
+            int sum = numbers[ahead] + numbers[behind];
+            if (sum > target)
+                behind--;
+            else if (sum < target)
+                ahead++;
+            else
+                break;
+        }
+        return new int[]{ahead + 1, behind + 1};
+    }
 }
