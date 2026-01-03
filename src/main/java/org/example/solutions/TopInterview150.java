@@ -1,6 +1,5 @@
 package org.example.solutions;
 
-import java.sql.Array;
 import java.util.*;
 
 
@@ -619,5 +618,47 @@ public class TopInterview150 {
             result = Math.max(result, left - right + 1);
         }
         return result;
+    }
+
+    /**
+     * 30. 串联所有单词的子串
+     */
+    public List<Integer> findSubstring(String s, String[] words) {
+        List<Integer> res = new ArrayList<>();
+        int wordNums = words.length, wordLength = words[0].length(), strLength = s.length();
+        for (int i = 0; i < wordLength; i++) {
+            if (i + wordNums * wordLength > strLength) {
+                break;
+            }
+            Map<String, Integer> differ = new HashMap<>();
+            for (int j = 0; j < wordNums; j++) {
+                String word = s.substring(i + j * wordLength, i + (j + 1) * wordLength);
+                differ.put(word, differ.getOrDefault(word, 0) + 1);
+            }
+            for (String word : words) {
+                differ.put(word, differ.getOrDefault(word, 0) - 1);
+                if (differ.get(word) == 0) {
+                    differ.remove(word);
+                }
+            }
+            for (int start = i; start < strLength - wordNums * wordLength + 1; start += wordLength) {
+                if (start != i) {
+                    String word = s.substring(start + (wordNums - 1) * wordLength, start + wordNums * wordLength);
+                    differ.put(word, differ.getOrDefault(word, 0) + 1);
+                    if (differ.get(word) == 0) {
+                        differ.remove(word);
+                    }
+                    word = s.substring(start - wordLength, start);
+                    differ.put(word, differ.getOrDefault(word, 0) - 1);
+                    if (differ.get(word) == 0) {
+                        differ.remove(word);
+                    }
+                }
+                if (differ.isEmpty()) {
+                    res.add(start);
+                }
+            }
+        }
+        return res;
     }
 }

@@ -290,4 +290,14 @@ public class TopInterview150Test {
         int result = solution.lengthOfLongestSubstring(s);
         assertEquals(3, result);
     }
+
+    @Test
+    @DisplayName("30. 串联所有单词的子串")
+    void testFindSubstring() {
+        String s = "barfoofoobarthefoobarman";
+        String[] words = new String[]{"bar","foo","the"};
+        List<Integer> result = solution.findSubstring(s, words);
+        List<Integer> expected = List.of(6, 9, 12);
+        assertEquals(expected, result);
+    }
 }
