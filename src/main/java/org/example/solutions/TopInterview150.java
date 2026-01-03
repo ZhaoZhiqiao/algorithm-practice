@@ -603,4 +603,21 @@ public class TopInterview150 {
         }
         return minLen != Integer.MAX_VALUE ? minLen : 0;
     }
+
+    /**
+     * 3. 无重复字符的最长子串
+     */
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> set = new HashSet<>();
+        char[] chars = s.toCharArray();
+        int result = 0;
+        for (int right = 0, left = 0; left < chars.length; left++) {
+            while (set.contains(chars[left])) {
+                set.remove(chars[right++]);
+            }
+            set.add(chars[left]);
+            result = Math.max(result, left - right + 1);
+        }
+        return result;
+    }
 }

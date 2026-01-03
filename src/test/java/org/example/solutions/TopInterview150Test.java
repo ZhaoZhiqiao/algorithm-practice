@@ -282,4 +282,12 @@ public class TopInterview150Test {
         int result = solution.minSubArrayLen(target, nums);
         assertEquals(2, result);
     }
+
+    @Test
+    @DisplayName("3. 无重复字符的最长子串")
+    void testLengthOfLongestSubstring() {
+        String s = "abcabcbb";
+        int result = solution.lengthOfLongestSubstring(s);
+        assertEquals(3, result);
+    }
 }
