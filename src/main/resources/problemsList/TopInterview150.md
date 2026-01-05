@@ -46,7 +46,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 长度最小的子数组 - (2026-01-02)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 无重复字符的最长子串 - (2026-01-03)
 - [x] ![困难](https://img.shields.io/badge/-困难-red) 串联所有单词的子串 - (2026-01-03)
-- [ ] ![困难](https://img.shields.io/badge/-困难-red) 最小覆盖子串
+- [x] ![困难](https://img.shields.io/badge/-困难-red) 最小覆盖子串 - (2026-01-05)
 
 ### 🔢 矩阵
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 有效的数独

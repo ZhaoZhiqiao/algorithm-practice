@@ -300,4 +300,13 @@ public class TopInterview150Test {
         List<Integer> expected = List.of(6, 9, 12);
         assertEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("76. 最小覆盖子串")
+    void testMinWindow(){
+        String s = "ADOBECODEBANC";
+        String t = "ABC";
+        String result = solution.minWindow(s, t);
+        assertEquals("BANC", result);
+    }
 }

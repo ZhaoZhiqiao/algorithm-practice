@@ -661,4 +661,41 @@ public class TopInterview150 {
         }
         return res;
     }
+
+    /**
+     * 76. 最小覆盖子串
+     */
+    public String minWindow(String s, String t) {
+        int[] result = {-1, s.length()};
+
+        HashMap<Character, Integer> count = new HashMap<>();
+        for (Character letter : t.toCharArray()) {
+            count.put(letter, count.getOrDefault(letter, 0) + 1);
+        }
+        int lack = count.size();
+
+        int left = 0, right = 0;
+        while (right < s.length()) {
+            Character letter = s.charAt(right);
+            count.put(letter, count.getOrDefault(letter, 0) - 1);
+            if (count.getOrDefault(letter, 0) == 0) {
+                lack -= 1;
+            }
+            while (lack == 0) {
+                if (right - left < result[1] - result[0]) {
+                    result[0] = left;
+                    result[1] = right;
+                }
+                letter = s.charAt(left);
+                if (count.getOrDefault(letter, 0) == 0) {
+                    lack++;
+                }
+                count.put(letter, count.getOrDefault(letter, 0) + 1);
+                left++;
+            }
+
+            right++;
+        }
+        return result[0] < 0 ? "" : s.substring(result[0], result[1] + 1);
+    }
 }
