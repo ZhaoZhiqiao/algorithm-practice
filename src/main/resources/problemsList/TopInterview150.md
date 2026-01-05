@@ -49,7 +49,7 @@
 - [x] ![困难](https://img.shields.io/badge/-困难-red) 最小覆盖子串 - (2026-01-05)
 
 ### 🔢 矩阵
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 有效的数独
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 有效的数独 - (2026-01-05)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 螺旋矩阵
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 旋转图像
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 矩阵置零

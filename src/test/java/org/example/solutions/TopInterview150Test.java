@@ -295,7 +295,7 @@ public class TopInterview150Test {
     @DisplayName("30. 串联所有单词的子串")
     void testFindSubstring() {
         String s = "barfoofoobarthefoobarman";
-        String[] words = new String[]{"bar","foo","the"};
+        String[] words = new String[]{"bar", "foo", "the"};
         List<Integer> result = solution.findSubstring(s, words);
         List<Integer> expected = List.of(6, 9, 12);
         assertEquals(expected, result);
@@ -303,10 +303,28 @@ public class TopInterview150Test {
 
     @Test
     @DisplayName("76. 最小覆盖子串")
-    void testMinWindow(){
+    void testMinWindow() {
         String s = "ADOBECODEBANC";
         String t = "ABC";
         String result = solution.minWindow(s, t);
         assertEquals("BANC", result);
+    }
+
+    @Test
+    @DisplayName("36. 有效的数独")
+    void testIsValidSudoku() {
+        char[][] board = {
+                {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+                {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+                {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+                {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+                {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+                {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+                {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+                {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+                {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
+        };
+        boolean result = solution.isValidSudoku(board);
+        assertTrue(result);
     }
 }
