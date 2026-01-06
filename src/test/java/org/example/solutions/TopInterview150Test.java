@@ -327,4 +327,17 @@ public class TopInterview150Test {
         boolean result = solution.isValidSudoku(board);
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("54. 螺旋矩阵")
+    void testSpiralOrder() {
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        List<Integer> result = solution.spiralOrder(matrix);
+        List<Integer> expected = List.of(1, 2, 3, 6, 9, 8, 7, 4, 5);
+        assertEquals(expected, result);
+    }
 }
