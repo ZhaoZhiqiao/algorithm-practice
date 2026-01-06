@@ -420,7 +420,7 @@ public class TopInterview150 {
      * 68. 文本左右对齐
      */
     public List<String> fullJustify(String[] words, int maxWidth) {
-        List<String> ans = new ArrayList<String>();
+        List<String> ans = new ArrayList<>();
         int right = 0, n = words.length;
         while (true) {
             int left = right;
@@ -761,5 +761,27 @@ public class TopInterview150 {
             bottom--;
         }
         return order;
+    }
+
+    /**
+     * 48. 旋转图像
+     */
+    public void rotate2(int[][] matrix) {
+        int rowLength = matrix.length - 1, colLength = matrix[0].length - 1;
+        for (int row = 0; row <= rowLength; row++) {
+            for (int col = 0; col <= colLength / 2; col++) {
+                int temp = matrix[row][col];
+                matrix[row][col] = matrix[row][colLength - col];
+                matrix[row][colLength - col] = temp;
+            }
+        }
+
+        for (int row = 0; row < rowLength; row++) {
+            for (int col = 0; col < colLength - row; col++) {
+                int temp = matrix[row][col];
+                matrix[row][col] = matrix[colLength - col][rowLength - row];
+                matrix[colLength - col][rowLength - row] = temp;
+            }
+        }
     }
 }

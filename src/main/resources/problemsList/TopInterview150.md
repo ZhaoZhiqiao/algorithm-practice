@@ -51,7 +51,7 @@
 ### 🔢 矩阵
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 有效的数独 - (2026-01-05)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 螺旋矩阵 - (2026-01-06)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 旋转图像
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 旋转图像 - (2026-01-06)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 矩阵置零
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 生命游戏
 

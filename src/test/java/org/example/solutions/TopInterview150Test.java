@@ -340,4 +340,23 @@ public class TopInterview150Test {
         List<Integer> expected = List.of(1, 2, 3, 6, 9, 8, 7, 4, 5);
         assertEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("48. 旋转图像")
+    void testRotate2() {
+        int[][] matrix = {
+                {5, 1, 9, 11},
+                {2, 4, 8, 10},
+                {13, 3, 6, 7},
+                {15, 14, 12, 16}
+        };
+        solution.rotate2(matrix);
+        int[][] expected = {
+                {15, 13, 2, 5},
+                {14, 3, 4, 1},
+                {12, 6, 8, 9},
+                {16, 7, 10, 11}
+        };
+        assertArrayEquals(expected, matrix);
+    }
 }
