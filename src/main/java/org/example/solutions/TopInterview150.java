@@ -784,4 +784,58 @@ public class TopInterview150 {
             }
         }
     }
+
+    /**
+     * 73. 矩阵置零
+     */
+    public void setZeroes(int[][] matrix) {
+        int zeroRow = -1, zeroCol = -1;
+        for (int row = 0; row < matrix.length && zeroRow == -1; row++) {
+            for (int col = 0; col < matrix[0].length && zeroCol == -1; col++) {
+                if (matrix[row][col] == 0) {
+                    zeroRow = row;
+                    zeroCol = col;
+                }
+            }
+        }
+        if (zeroRow == -1)
+            return;
+
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[0].length; col++) {
+                if (matrix[row][col] == 0) {
+                    matrix[zeroRow][col] = 0;
+                    matrix[row][zeroCol] = 0;
+                }
+            }
+        }
+
+        for (int row = 0; row < matrix.length; row++) {
+            if (row == zeroRow)
+                continue;
+            if (matrix[row][zeroCol] == 0) {
+                for (int col = 0; col < matrix[0].length; col++) {
+                    matrix[row][col] = 0;
+                }
+            }
+        }
+
+        for (int col = 0; col < matrix[0].length; col++) {
+            if (col == zeroCol)
+                continue;
+            if (matrix[zeroRow][col] == 0) {
+                for (int row = 0; row < matrix.length; row++) {
+                    matrix[row][col] = 0;
+                }
+            }
+        }
+
+        for (int row = 0; row < matrix.length; row++) {
+            matrix[row][zeroCol] = 0;
+        }
+
+        for (int col = 0; col < matrix[0].length; col++) {
+            matrix[zeroRow][col] = 0;
+        }
+    }
 }

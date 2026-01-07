@@ -359,4 +359,21 @@ public class TopInterview150Test {
         };
         assertArrayEquals(expected, matrix);
     }
+
+    @Test
+    @DisplayName("73. 矩阵置零")
+    void testSetZeroes() {
+        int[][] matrix = {
+                {1, 1, 1},
+                {1, 0, 1},
+                {1, 1, 1}
+        };
+        solution.setZeroes(matrix);
+        int[][] expected = {
+                {1, 0, 1},
+                {0, 0, 0},
+                {1, 0, 1}
+        };
+        assertArrayEquals(expected, matrix);
+    }
 }
