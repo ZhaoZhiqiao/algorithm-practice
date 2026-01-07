@@ -376,4 +376,24 @@ public class TopInterview150Test {
         };
         assertArrayEquals(expected, matrix);
     }
+
+    @Test
+    @DisplayName("289. 生命游戏")
+    void testGameOfLife() {
+        int[][] board = {
+                {0, 1, 0},
+                {0, 0, 1},
+                {1, 1, 1},
+                {0, 0, 0}
+        };
+        solution.gameOfLife(board);
+        int[][] expected = {
+                {0, 0, 0},
+                {1, 0, 1},
+                {0, 1, 1},
+                {0, 1, 0}
+        };
+        assertArrayEquals(expected, board);
+    }
+
 }

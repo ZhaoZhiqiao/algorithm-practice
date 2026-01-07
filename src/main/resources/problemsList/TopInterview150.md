@@ -53,7 +53,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 螺旋矩阵 - (2026-01-06)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 旋转图像 - (2026-01-06)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 矩阵置零 - (2026-01-07)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 生命游戏
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 生命游戏 - (2026-01-07)
 
 ### 🗂️ 哈希表
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 赎金信
