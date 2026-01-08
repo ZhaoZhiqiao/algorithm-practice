@@ -405,4 +405,13 @@ public class TopInterview150Test {
         assertFalse(result);
     }
 
+    @Test
+    @DisplayName("205. 同构字符串")
+    void testIsIsomorphic() {
+        String s = "egg";
+        String t = "add";
+        boolean result = solution.isIsomorphic(s, t);
+        assertTrue(result);
+    }
+
 }

@@ -898,4 +898,22 @@ public class TopInterview150 {
         }
         return dict.isEmpty();
     }
+
+    /**
+     * 205. 同构字符串
+     */
+    public boolean isIsomorphic(String s, String t) {
+        Map<Character, Character> dict = new HashMap<>();
+        int index = 0;
+        while (index < s.length()) {
+            if (dict.containsKey(s.charAt(index))) {
+                if (dict.get(s.charAt(index)) != t.charAt(index))
+                    break;
+            } else {
+                dict.put(s.charAt(index), t.charAt(index));
+            }
+            index++;
+        }
+        return index == s.length() && new HashSet<>(dict.values()).size() == dict.size();
+    }
 }
