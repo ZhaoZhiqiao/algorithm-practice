@@ -56,7 +56,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 生命游戏 - (2026-01-07)
 
 ### 🗂️ 哈希表
-- [ ] ![简单](https://img.shields.io/badge/-简单-green) 赎金信
+- [x] ![简单](https://img.shields.io/badge/-简单-green) 赎金信 - (2026-01-08)
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 同构字符串
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 单词规律
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 有效的字母异位词

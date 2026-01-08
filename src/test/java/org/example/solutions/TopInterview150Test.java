@@ -396,4 +396,13 @@ public class TopInterview150Test {
         assertArrayEquals(expected, board);
     }
 
+    @Test
+    @DisplayName("383. 赎金信")
+    void testCanConstruct() {
+        String ransomNote = "a";
+        String magazine = "b";
+        boolean result = solution.canConstruct(ransomNote, magazine);
+        assertFalse(result);
+    }
+
 }

@@ -879,4 +879,23 @@ public class TopInterview150 {
             }
         }
     }
+
+    /**
+     * 383. 赎金信
+     */
+    public boolean canConstruct(String ransomNote, String magazine) {
+        Map<Character, Integer> dict = new HashMap<>();
+        for (Character c : ransomNote.toCharArray()) {
+            dict.put(c, dict.getOrDefault(c, 0) + 1);
+        }
+        for (Character c : magazine.toCharArray()) {
+            if (dict.containsKey(c)) {
+                dict.put(c, dict.get(c) - 1);
+                if (dict.get(c) == 0) {
+                    dict.remove(c);
+                }
+            }
+        }
+        return dict.isEmpty();
+    }
 }
