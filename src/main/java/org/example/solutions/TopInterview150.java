@@ -967,4 +967,19 @@ public class TopInterview150 {
         }
         return new ArrayList<>(map.values());
     }
+
+    /**
+     * 1. 两数之和
+     */
+    public int[] twoSumUnsorted(int[] nums, int target) {
+        Map<Integer, Integer> dict = new HashMap<>();
+        for (int index = 0; index < nums.length; index++) {
+            int need = target - nums[index];
+            if (dict.containsKey(need))
+                return new int[]{index, dict.get(need)};
+            else
+                dict.put(nums[index], index);
+        }
+        return new int[]{-1, -1};
+    }
 }

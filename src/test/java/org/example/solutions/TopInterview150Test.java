@@ -447,4 +447,13 @@ public class TopInterview150Test {
             assertTrue(result.stream().anyMatch(r -> r.containsAll(group) && group.containsAll(r)));
         }
     }
+
+    @Test
+    @DisplayName("1. 两数之和")
+    void testTwoSumUnsorted() {
+        int[] nums = new int[]{2, 7, 11, 15};
+        int target = 9;
+        int[] result = solution.twoSumUnsorted(nums, target);
+        assertArrayEquals(new int[]{1, 0}, result);
+    }
 }
