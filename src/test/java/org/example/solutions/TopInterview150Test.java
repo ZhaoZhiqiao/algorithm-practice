@@ -414,4 +414,13 @@ public class TopInterview150Test {
         assertTrue(result);
     }
 
+    @Test
+    @DisplayName("290. 单词规律")
+    void testWordPattern() {
+        String pattern = "abba";
+        String s = "dog cat cat dog";
+        boolean result = solution.wordPattern(pattern, s);
+        assertTrue(result);
+    }
+
 }

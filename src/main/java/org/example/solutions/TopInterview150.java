@@ -916,4 +916,24 @@ public class TopInterview150 {
         }
         return index == s.length() && new HashSet<>(dict.values()).size() == dict.size();
     }
+
+    /**
+     * 290. 单词规律
+     */
+    public boolean wordPattern(String pattern, String s) {
+        HashMap<Character, String> dict = new HashMap<>();
+        String[] words = s.split("\\s");
+        if (words.length != pattern.length())
+            return false;
+        int index = 0;
+        while (index < pattern.length()) {
+            if (dict.containsKey(pattern.charAt(index))) {
+                if (!dict.get(pattern.charAt(index)).equals(words[index]))
+                    break;
+            } else
+                dict.put(pattern.charAt(index), words[index]);
+            index++;
+        }
+        return index == pattern.length() && new HashSet<>(dict.values()).size() == dict.size();
+    }
 }
