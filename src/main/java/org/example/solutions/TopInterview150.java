@@ -936,4 +936,21 @@ public class TopInterview150 {
         }
         return index == pattern.length() && new HashSet<>(dict.values()).size() == dict.size();
     }
+
+    /**
+     * 有效的字母异位词
+     */
+    public boolean isAnagram(String s, String t) {
+        Map<Character, Integer> map = new HashMap<>();
+        for (Character c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        for (Character c : t.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) - 1);
+            if (map.get(c) == 0)
+                map.remove(c);
+        }
+        return map.isEmpty();
+    }
+
 }

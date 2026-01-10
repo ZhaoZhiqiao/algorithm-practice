@@ -423,4 +423,14 @@ public class TopInterview150Test {
         assertTrue(result);
     }
 
+    @Test
+    @DisplayName("242. 有效的字母异位词")
+    void testIsAnagram() {
+        String s = "anagram";
+        String t = "nagaram";
+        boolean result = solution.isAnagram(s, t);
+        assertTrue(result);
+    }
+
+
 }

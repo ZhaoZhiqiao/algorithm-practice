@@ -59,7 +59,7 @@
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 赎金信 - (2026-01-08)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 同构字符串 - (2026-01-08)
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 单词规律 - (2026-01-10)
-- [ ] ![简单](https://img.shields.io/badge/-简单-green) 有效的字母异位词
+- [x] ![简单](https://img.shields.io/badge/-简单-green) 有效的字母异位词 - (2026-01-10)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 字母异位词分组
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 两数之和
 - [ ] ![简单](https://img.shields.io/badge/-简单-green) 快乐数
