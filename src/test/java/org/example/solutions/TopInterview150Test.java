@@ -432,5 +432,19 @@ public class TopInterview150Test {
         assertTrue(result);
     }
 
-
+    @Test
+    @DisplayName("49. 字母异位词分组")
+    void testGroupAnagrams() {
+        String[] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
+        List<List<String>> result = solution.groupAnagrams(strs);
+        List<List<String>> expected = List.of(
+                List.of("eat", "tea", "ate"),
+                List.of("tan", "nat"),
+                List.of("bat")
+        );
+        assertEquals(expected.size(), result.size());
+        for (List<String> group : expected) {
+            assertTrue(result.stream().anyMatch(r -> r.containsAll(group) && group.containsAll(r)));
+        }
+    }
 }

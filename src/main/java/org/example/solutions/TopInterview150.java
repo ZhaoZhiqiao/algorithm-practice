@@ -953,4 +953,18 @@ public class TopInterview150 {
         return map.isEmpty();
     }
 
+    /**
+     * 49. 字母异位词分组
+     */
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
+        StringBuilder stringBuilder;
+        for (String str : strs) {
+            char[] s = str.toCharArray();
+            Arrays.sort(s);
+            map.put(Arrays.toString(s), map.getOrDefault(Arrays.toString(s), new ArrayList<>()));
+            map.get(Arrays.toString(s)).add(str);
+        }
+        return new ArrayList<>(map.values());
+    }
 }
