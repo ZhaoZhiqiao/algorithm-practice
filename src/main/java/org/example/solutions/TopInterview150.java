@@ -982,4 +982,22 @@ public class TopInterview150 {
         }
         return new int[]{-1, -1};
     }
+
+    /**
+     * 202. 快乐数
+     */
+    public boolean isHappy(int n) {
+        Set<Integer> set = new HashSet<>();
+        int sum = n, temp;
+        while (!set.contains(sum)) {
+            set.add(sum);
+            temp = 0;
+            while (sum != 0) {
+                temp += (int) Math.pow((sum % 10), 2);
+                sum = sum / 10;
+            }
+            sum = temp;
+        }
+        return sum == 1;
+    }
 }

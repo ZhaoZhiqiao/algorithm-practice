@@ -456,4 +456,12 @@ public class TopInterview150Test {
         int[] result = solution.twoSumUnsorted(nums, target);
         assertArrayEquals(new int[]{1, 0}, result);
     }
+
+    @Test
+    @DisplayName("202. 快乐数")
+    void testIsHappy() {
+        int n = 19;
+        boolean result = solution.isHappy(n);
+        assertTrue(result);
+    }
 }
