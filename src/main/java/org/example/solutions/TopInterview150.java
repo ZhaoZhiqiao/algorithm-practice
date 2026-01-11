@@ -1000,4 +1000,21 @@ public class TopInterview150 {
         }
         return sum == 1;
     }
+
+    /**
+     * 219. 存在重复元素 II
+     */
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        HashMap<Integer, Integer> dict = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (dict.containsKey(nums[i])) {
+                if (i - dict.get(nums[i]) <= k)
+                    return true;
+                else
+                    dict.put(nums[i], i);
+            } else
+                dict.put(nums[i], i);
+        }
+        return false;
+    }
 }

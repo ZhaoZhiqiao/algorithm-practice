@@ -464,4 +464,13 @@ public class TopInterview150Test {
         boolean result = solution.isHappy(n);
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("219. 存在重复元素 II")
+    void testContainsNearbyDuplicate() {
+        int[] nums = new int[]{1, 2, 3, 1};
+        int k = 3;
+        boolean result = solution.containsNearbyDuplicate(nums, k);
+        assertTrue(result);
+    }
 }
