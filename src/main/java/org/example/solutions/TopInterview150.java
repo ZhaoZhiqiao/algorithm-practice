@@ -999,10 +999,7 @@ public class TopInterview150 {
      * 128. 最长连续序列
      */
     public int longestConsecutive(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            set.add(num);
-        }
+        Set<Integer> set = Arrays.stream(nums).boxed().collect(Collectors.toSet());
         int maxLongest = 0;
         for (int start : nums) {
             int end = start;
@@ -1015,5 +1012,33 @@ public class TopInterview150 {
             maxLongest = Math.max(maxLongest, end - start + 1);
         }
         return maxLongest;
+    }
+
+    /**
+     * 228. 汇总区间
+     */
+    public List<String> summaryRanges(int[] nums) {
+        List<String> result = new ArrayList<>();
+        if (nums.length == 0) return result;
+        int start = nums[0], end = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == end + 1) {
+                end = nums[i];
+            } else {
+                if (start == end) {
+                    result.add(String.valueOf(start));
+                } else {
+                    result.add(start + "->" + end);
+                }
+                start = nums[i];
+                end = nums[i];
+            }
+        }
+        if (start == end) {
+            result.add(String.valueOf(start));
+        } else {
+            result.add(start + "->" + end);
+        }
+        return result;
     }
 }

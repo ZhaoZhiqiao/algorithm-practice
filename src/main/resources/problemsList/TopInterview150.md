@@ -67,7 +67,7 @@
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 最长连续序列 - (2026-01-12)
 
 ### 📊 区间
-- [ ] ![简单](https://img.shields.io/badge/-简单-green) 汇总区间
+- [x] ![简单](https://img.shields.io/badge/-简单-green) 汇总区间 - (2026-01-12)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 合并区间
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 插入区间
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 用最少数量的箭引爆气球

@@ -481,4 +481,13 @@ public class TopInterview150Test {
         int result = solution.longestConsecutive(nums);
         assertEquals(4, result);
     }
+
+    @Test
+    @DisplayName("228. 汇总区间")
+    void testSummaryRanges() {
+        int[] nums = new int[]{0, 1, 2, 4, 5, 7};
+        List<String> result = solution.summaryRanges(nums);
+        List<String> expected = List.of("0->2", "4->5", "7");
+        assertEquals(expected, result);
+    }
 }
