@@ -473,4 +473,12 @@ public class TopInterview150Test {
         boolean result = solution.containsNearbyDuplicate(nums, k);
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("128. 最长连续序列")
+    void testLongestConsecutive() {
+        int[] nums = new int[]{100, 4, 200, 1, 3, 2};
+        int result = solution.longestConsecutive(nums);
+        assertEquals(4, result);
+    }
 }

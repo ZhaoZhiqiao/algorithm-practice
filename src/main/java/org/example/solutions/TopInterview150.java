@@ -1,6 +1,7 @@
 package org.example.solutions;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**
@@ -178,8 +179,7 @@ public class TopInterview150 {
         Arrays.sort(citations);
         int h = 0;
         for (int i = citations.length - 1; i >= 0; i--, h++) {
-            if (h >= citations[i])
-                break;
+            if (h >= citations[i]) break;
         }
         return h;
     }
@@ -319,8 +319,7 @@ public class TopInterview150 {
      * 13. 罗马数字转整数
      */
     public int romanToInt(String s) {
-        Map<Character, Integer> dict = Map.of('I', 1, 'V', 5, 'X', 10,
-                'L', 50, 'C', 100, 'D', 500, 'M', 1000);
+        Map<Character, Integer> dict = Map.of('I', 1, 'V', 5, 'X', 10, 'L', 50, 'C', 100, 'D', 500, 'M', 1000);
         int result = 0;
         char[] chars = s.toCharArray();
         for (int i = 0; i < s.length() - 1; i++) {
@@ -375,8 +374,7 @@ public class TopInterview150 {
                     break;
                 }
             }
-            if (flag)
-                stringBuilder.append(c);
+            if (flag) stringBuilder.append(c);
         }
         return stringBuilder.toString();
     }
@@ -392,8 +390,7 @@ public class TopInterview150 {
      * 6. Z 字形变换
      */
     public String convert(String s, int numRows) {
-        if (numRows < 2)
-            return s;
+        if (numRows < 2) return s;
         List<StringBuilder> rows = new ArrayList<>();
         for (int i = 0; i < numRows; i++)
             rows.add(new StringBuilder());
@@ -526,12 +523,9 @@ public class TopInterview150 {
         int ahead = 0, behind = numbers.length - 1;
         while (ahead < behind) {
             int sum = numbers[ahead] + numbers[behind];
-            if (sum > target)
-                behind--;
-            else if (sum < target)
-                ahead++;
-            else
-                break;
+            if (sum > target) behind--;
+            else if (sum < target) ahead++;
+            else break;
         }
         return new int[]{ahead + 1, behind + 1};
     }
@@ -543,10 +537,8 @@ public class TopInterview150 {
         int ahead = 0, behind = height.length - 1, result = 0;
         while (ahead < behind) {
             result = Math.max(result, Math.min(height[ahead], height[behind]) * (behind - ahead));
-            if (height[ahead] > height[behind])
-                behind--;
-            else
-                ahead++;
+            if (height[ahead] > height[behind]) behind--;
+            else ahead++;
         }
         return result;
     }
@@ -569,10 +561,8 @@ public class TopInterview150 {
                     continue;
                 }
                 int sum = nums[first] + nums[second] + nums[third];
-                if (sum > 0)
-                    third--;
-                else if (sum < 0)
-                    second++;
+                if (sum > 0) third--;
+                else if (sum < 0) second++;
                 else {
                     result.add(List.of(nums[first], nums[second], nums[third]));
                     third--;
@@ -798,8 +788,7 @@ public class TopInterview150 {
                 }
             }
         }
-        if (zeroRow == -1)
-            return;
+        if (zeroRow == -1) return;
 
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[0].length; col++) {
@@ -811,8 +800,7 @@ public class TopInterview150 {
         }
 
         for (int row = 0; row < matrix.length; row++) {
-            if (row == zeroRow)
-                continue;
+            if (row == zeroRow) continue;
             if (matrix[row][zeroCol] == 0) {
                 for (int col = 0; col < matrix[0].length; col++) {
                     matrix[row][col] = 0;
@@ -821,8 +809,7 @@ public class TopInterview150 {
         }
 
         for (int col = 0; col < matrix[0].length; col++) {
-            if (col == zeroCol)
-                continue;
+            if (col == zeroCol) continue;
             if (matrix[zeroRow][col] == 0) {
                 for (int row = 0; row < matrix.length; row++) {
                     matrix[row][col] = 0;
@@ -907,8 +894,7 @@ public class TopInterview150 {
         int index = 0;
         while (index < s.length()) {
             if (dict.containsKey(s.charAt(index))) {
-                if (dict.get(s.charAt(index)) != t.charAt(index))
-                    break;
+                if (dict.get(s.charAt(index)) != t.charAt(index)) break;
             } else {
                 dict.put(s.charAt(index), t.charAt(index));
             }
@@ -923,15 +909,12 @@ public class TopInterview150 {
     public boolean wordPattern(String pattern, String s) {
         HashMap<Character, String> dict = new HashMap<>();
         String[] words = s.split("\\s");
-        if (words.length != pattern.length())
-            return false;
+        if (words.length != pattern.length()) return false;
         int index = 0;
         while (index < pattern.length()) {
             if (dict.containsKey(pattern.charAt(index))) {
-                if (!dict.get(pattern.charAt(index)).equals(words[index]))
-                    break;
-            } else
-                dict.put(pattern.charAt(index), words[index]);
+                if (!dict.get(pattern.charAt(index)).equals(words[index])) break;
+            } else dict.put(pattern.charAt(index), words[index]);
             index++;
         }
         return index == pattern.length() && new HashSet<>(dict.values()).size() == dict.size();
@@ -947,8 +930,7 @@ public class TopInterview150 {
         }
         for (Character c : t.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) - 1);
-            if (map.get(c) == 0)
-                map.remove(c);
+            if (map.get(c) == 0) map.remove(c);
         }
         return map.isEmpty();
     }
@@ -975,10 +957,8 @@ public class TopInterview150 {
         Map<Integer, Integer> dict = new HashMap<>();
         for (int index = 0; index < nums.length; index++) {
             int need = target - nums[index];
-            if (dict.containsKey(need))
-                return new int[]{index, dict.get(need)};
-            else
-                dict.put(nums[index], index);
+            if (dict.containsKey(need)) return new int[]{index, dict.get(need)};
+            else dict.put(nums[index], index);
         }
         return new int[]{-1, -1};
     }
@@ -1008,13 +988,32 @@ public class TopInterview150 {
         HashMap<Integer, Integer> dict = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (dict.containsKey(nums[i])) {
-                if (i - dict.get(nums[i]) <= k)
-                    return true;
-                else
-                    dict.put(nums[i], i);
-            } else
-                dict.put(nums[i], i);
+                if (i - dict.get(nums[i]) <= k) return true;
+                else dict.put(nums[i], i);
+            } else dict.put(nums[i], i);
         }
         return false;
+    }
+
+    /**
+     * 128. 最长连续序列
+     */
+    public int longestConsecutive(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
+        }
+        int maxLongest = 0;
+        for (int start : nums) {
+            int end = start;
+            if (set.contains(start - 1)) {
+                continue;
+            }
+            while (set.contains(end + 1)) {
+                set.remove(end++);
+            }
+            maxLongest = Math.max(maxLongest, end - start + 1);
+        }
+        return maxLongest;
     }
 }
