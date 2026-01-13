@@ -490,4 +490,24 @@ public class TopInterview150Test {
         List<String> expected = List.of("0->2", "4->5", "7");
         assertEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("56. 合并区间")
+    void testMergeRanges() {
+        int[][] intervals = {
+                {1, 3},
+                {2, 6},
+                {8, 10},
+                {15, 18}
+        };
+        int[][] result = solution.mergeRanges(intervals);
+        int[][] expected = {
+                {1, 6},
+                {8, 10},
+                {15, 18}
+        };
+        assertArrayEquals(expected, result);
+    }
+
+
 }
