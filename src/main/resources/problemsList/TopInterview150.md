@@ -69,7 +69,7 @@
 ### 📊 区间
 - [x] ![简单](https://img.shields.io/badge/-简单-green) 汇总区间 - (2026-01-12)
 - [x] ![中等](https://img.shields.io/badge/-中等-orange) 合并区间 - (2026-01-13)
-- [ ] ![中等](https://img.shields.io/badge/-中等-orange) 插入区间
+- [x] ![中等](https://img.shields.io/badge/-中等-orange) 插入区间 - (2026-01-13)
 - [ ] ![中等](https://img.shields.io/badge/-中等-orange) 用最少数量的箭引爆气球
 
 ### 📚 栈

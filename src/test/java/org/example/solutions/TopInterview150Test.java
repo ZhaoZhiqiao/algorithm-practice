@@ -509,5 +509,20 @@ public class TopInterview150Test {
         assertArrayEquals(expected, result);
     }
 
+    @Test
+    @DisplayName("插入区间")
+    void testInsert() {
+        int[][] intervals = {
+                {1, 3},
+                {6, 9}
+        };
+        int[] newInterval = {2, 5};
+        int[][] result = solution.insert(intervals, newInterval);
+        int[][] expected = {
+                {1, 5},
+                {6, 9}
+        };
+        assertArrayEquals(expected, result);
+    }
 
 }
